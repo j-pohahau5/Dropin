@@ -1,0 +1,101 @@
+<main id="login-main" style="background-image: url({{bgImage}})">
+  <section>
+    <div class="flex" style="justify-content: center; padding: .5em;">
+      <img
+        src="{{logo.imagePath}}"
+        class="logo"
+        style="width: 40%; height: auto"
+        alt="{{logo.imageAlt}}"
+      />
+    </div>
+
+    <div class="flex" style="flex-direction: column; justify-content: center; align-items: center;">
+      <p style="width: 50%; height: auto; margin-bottom: 2em;">
+        Welcome to the ultimate travel companion! Our site is designed for
+        people who love to travel and want an easy way to document all of their
+        trips. Whether you're a seasoned traveler or just starting out, our site
+        is the perfect way to help you organize and remember your travels.</p>
+      <ul style="width: 50%; height: auto; margin-bottom: 2em;">
+        <li>📍 Drop a pin anywhere on a map to create a visual representation of
+          your travels</li>
+        <li>📝 Input all your memories like a journal by clicking on the pin</li>
+        <li>🍴 Store your favorite foods and other experiences in separate
+          places</li>
+        <li>🎨 Customizable to fit your unique needs</li>
+        <li>💥 Say goodbye to forgotten adventures and hello to a beautifully
+          organized record of your travels</li>
+      </ul>
+
+    </div>
+
+    <dialog class="modal" id="modal-1">
+      <header>
+        <h2 style="margin-bottom: .5em">Please enter the requested information
+          below:</h2>
+        <ul style="margin: .5em; list-style-type: disc;">
+          <li>Your username must be unique</li>
+          <li>Your password must be 8 charachters long and include both upper
+            and lower case characters.</li>
+        </ul>
+
+      </header>
+      <form method="dialog">
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          class="input-field grid-col-span-2"
+        />
+        <div id="nameCheck" class="hidden"></div>
+        <input
+          type="text"
+          id="display_name"
+          placeholder="Display Name"
+          class="input-field grid-col-span-2"
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          class="input-field grid-col-span-2"
+        />
+        <button class="button close-button">Cancel</button>
+        <button class="button" type="submit" id="signup-call">Sign Up</button>
+
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="modal-2">
+      <form method="dialog">
+
+        <input
+          type="text"
+          id="login-username"
+          placeholder="Username"
+          class="input-field grid-col-span-2"
+        />
+
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Password"
+          class="input-field grid-col-span-2"
+        />
+        <button class="button close-button">Cancel</button>
+        <button class="button" type="submit" id="login-call">Log In</button>
+      </form>
+    </dialog>
+
+    <div class="flex" style="justify-content: center">
+      <button id="signup" class="button open-button">
+        Sign Up
+      </button>
+      <span style="width: 2em"></span>
+      <button id="login" type="button" class="button open-button">
+        Login
+      </button>
+
+    </div>
+  </section>
+  <script src="/JS/login.js"></script>
+</main>
